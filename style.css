@@ -1,0 +1,246 @@
+:root {
+  --pink-main: #ff6b9d;
+  --pink-dark: #e03e7c;
+  --pink-light: #fff0f7;
+  --accent: #ff2479;
+  --text: #2d2d2d;
+  --light-text: #555555;
+  --shadow: 0 10px 30px rgba(255, 107, 157, 0.18);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--pink-light);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+
+header {
+  background: linear-gradient(135deg, var(--pink-main), #ff8da1);
+  padding: 1.2rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 30px;
+  transition: all 0.35s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-4px);
+}
+
+
+.home {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff0f7, #ffe0eb, #ffb3d1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.home-content {
+  max-width: 850px;
+}
+
+.home h1 {
+  font-size: clamp(2.8rem, 6vw, 4.2rem);
+  color: var(--accent);
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.home h2 {
+  font-size: 2.1rem;
+  color: #444444;
+  margin-bottom: 30px;
+}
+
+.home p {
+  font-size: 1.25rem;
+  color: var(--light-text);
+  max-width: 680px;
+  margin: 0 auto 25px;
+}
+
+
+.btn {
+  margin-top: 30px;
+  padding: 16px 55px;
+  background: linear-gradient(135deg, var(--pink-main), #ff8da1);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, var(--pink-dark), #e03e7c);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+
+.form-container {
+  max-width: 700px;
+  margin: 60px auto;
+  background: white;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.form-container h2 {
+  text-align: center;
+  color: var(--pink-main);
+  margin-bottom: 40px;
+  font-size: 2.3rem;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px 18px;
+  border: 2px solid #ffc1d9;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--pink-dark);
+  box-shadow: 0 0 0 4px rgba(255, 107, 157, 0.15);
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.table-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.table-container h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--pink-main);
+  font-size: 2.2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+th, td {
+  padding: 20px 15px;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+th {
+  background: var(--pink-main);
+  color: white;
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: #fff5f9;
+}
+
+
+footer {
+  background: linear-gradient(135deg, var(--pink-main), #ff8da1);
+  color: white;
+  text-align: center;
+  padding: 2.5rem 0;
+  margin-top: 80px;
+  font-size: 1rem;
+}
+
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .home h1 {
+    font-size: 2.6rem;
+  }
+  
+  .home h2 {
+    font-size: 1.7rem;
+  }
+
+  .form-container {
+    margin: 30px 15px;
+    padding: 35px 25px;
+  }
+
+  .form-container h2 {
+    font-size: 2rem;
+  }
+
+  .table-container {
+    margin: 40px auto;
+    padding: 0 15px;
+  }
+
+  table {
+    font-size: 0.95rem;
+  }
+}
